@@ -1,0 +1,172 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f0f0f0;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hsl-modifier, .color-keywords {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.hsl-controls {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.icon-examples {
+  margin-top: 20px;
+}
+
+.sliders {
+  margin-right: 20px; /* Add space between the sliders and the view box */
+}
+
+#modifierColorDisplay {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #000;
+  background-color: hsla(180, 50%, 50%, 1); /* Initial color */
+}
+
+.icon {
+  display: block;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 5px 0;
+}
+
+/* Centered notification for copy to clipboard */
+.copy-message {
+  position: fixed;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(50, 50, 50, 0.8); /* Grey background with transparency */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px; /* Rounded corners */
+  font-size: 16px;
+  text-align: center;
+  display: none; /* Initially hidden */
+  z-index: 1000; /* Ensure it appears above other content */
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.show-message {
+  display: inline-block;
+  opacity: 1; /* Fully visible */
+}
+
+.entities-preview {
+  margin-top: 10px;
+}
+
+.entities-grid {
+  display: grid;
+  width: 60%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.entity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fan, .fa-house-user, .fa-user, .fa-bell {
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.4); /* Default color for 'Off' fans */
+}
+
+.label {
+  margin-top: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.status {
+  margin-top: 5px;
+  color: white;
+  font-size: 15px;
+}
+
+/* Animated fan when 'On' */
+.active {
+  animation: spin 1s linear infinite;
+}
+
+/* Dynamic color for the fan */
+.dynamic-color {
+  color: hsla(180, 50%, 50%, 1); /* Will be dynamically updated by JavaScript */
+}
+
+/* Fan spinning animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*////////////////////////// */
+
+#colorTableContainer {
+  display: flex;
+  justify-content: left;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+td:hover {
+  opacity: 0.8;
+}

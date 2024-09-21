@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Color Picker and HSL Modifier</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+
+  <div class="row">
+    <!-- HSL Color Modifier Section -->
+    <section class="hsl-modifier">
+  <h2>HSL Color Modifier</h2>
+  <div class="hsl-controls">
+    <div class="sliders">
+      <label for="hueRange">Hue:</label>
+      <input type="range" id="hueRange" min="0" max="360" value="180">
+      <span id="hueValue">180</span><br>
+
+      <label for="saturationRange">Saturation:</label>
+      <input type="range" id="saturationRange" min="0" max="100" value="50">
+      <span id="saturationValue">50</span><br>
+
+      <label for="lightnessRange">Lightness:</label>
+      <input type="range" id="lightnessRange" min="0" max="100" value="50">
+      <span id="lightnessValue">50</span><br>
+
+      <label for="alphaRange">Transparency:</label>
+      <input type="range" id="alphaRange" min="0" max="1" step="0.01" value="1">
+      <span id="alphaValue">1</span><br>
+
+      <button id="exportHSLModifierBtn">Copy hsla(180, 50%, 50%, 1) to clipboard</button><br/>
+      <span id="copyMessageHSL" class="copy-message"></span>
+    </div>
+
+    <div id="modifierColorDisplay"></div>
+  </div>
+
+
+<section class="entities-preview">
+  <h2>Preview</h2>
+  <div class="entities-grid">
+    <div class="entity">
+      <i class="fas fa-fan fan" id="icon_1"></i>
+      <div class="label">AC Office</div>
+      <div class="status" id="acOfficeCoolStatus">On</div>
+    </div>
+  
+    <div class="entity">
+      <i class="fa-solid fa-bell" id="icon_2"></i>
+      <div class="label">Bell</div>
+      
+    </div>
+    <div class="entity">
+       <i class="fa-solid fa-house-user" id="icon_3"></i>
+      <div class="label">User Home</div>
+      
+    </div>
+    <div class="entity">
+      <i class="fas fa-fan fan"id="icon_4"></i>
+      <div class="label">AC Office</div>
+      <div class="status" id="acLivingHeatStatus">Off</div>
+    </div>
+	 <div class="entity">
+      <i class="fa-solid fa-user" id="icon_5"></i>
+      <div class="label">User Logged</div>
+      
+    </div>
+    <div class="entity">
+	  <i class="fa-regular fa-user" id="icon_6"></i>
+      <div class="label">User Logged</div>
+      
+    </div>
+  </div>
+</section>
+
+</section>
+
+
+    <!-- Extended Color Keywords Picker -->
+    <section class="color-keywords">
+      <h2>Extended Color Picker</h2>
+      
+
+<!--
+      <div id="keywordColorDisplay" style="width: 250px; height: 250px; border: 1px solid #000; background-color: aliceblue;"></div>
+ <select id="colorKeywordPicker"></select>
+      <button id="exportKeywordBtn">Copy aliceblue to clipboard</button>
+      <span id="copyMessageKeyword" class="copy-message"></span>
+	 -->
+  <div id="colorTableContainer"></div>
+
+  <!-- Notification for clipboard copy -->
+  <span id="copyNotification" class="copy-message"></span>
+<section class="entities-preview">
+  <h2>Preview 1</h2>
+  <div class="entities-grid">
+    <div class="entity">
+      <i class="fas fa-fan fan" id="picon_1"></i>
+      <div class="label">AC Office</div>
+      <div class="status" id="acOfficeCoolStatus1">On</div>
+    </div>
+  
+    <div class="entity">
+      <i class="fa-solid fa-bell" id="picon_2"></i>
+      <div class="label">Bell</div>
+      
+    </div>
+    <div class="entity">
+       <i class="fa-solid fa-house-user" id="picon_3"></i>
+      <div class="label">User Home</div>
+      
+    </div>
+    <div class="entity">
+      <i class="fas fa-fan fan" id="picon_4"></i>
+      <div class="label">AC Office</div>
+      <div class="status" id="acLivingHeatStatus">Off</div>
+    </div>
+	 <div class="entity">
+      <i class="fa-solid fa-user" id="picon_5"></i>
+      <div class="label">User Logged</div>
+      
+    </div>
+    <div class="entity">
+	  <i class="fa-regular fa-user" id="picon_6"></i>
+      <div class="label">User Logged</div>
+      
+    </div>
+  </div>
+</section>
+    </section>
+  </div>
+
+  <span id="copyNotification" class="copy-message"></span>
+  <script src="scripts.js"></script>
+</body>
+</html>

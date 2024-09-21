@@ -21,29 +21,20 @@ h1, h2 {
 
 .hsl-controls {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.icon-examples {
-  margin-top: 20px;
+  width: 65%;
 }
 
 .sliders {
-  margin-right: 20px; /* Add space between the sliders and the view box */
+  margin-right: 30px; /* Add space between the sliders and the view box */
+  width: 55%;
 }
 
 #modifierColorDisplay {
   width: 250px;
   height: 250px;
+  maring-left: 10px;
   border: 1px solid #000;
   background-color: hsla(180, 50%, 50%, 1); /* Initial color */
-}
-
-.icon {
-  display: block;
-  font-size: 24px;
-  margin-top: 10px;
 }
 
 button {
@@ -55,6 +46,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 button:hover {
